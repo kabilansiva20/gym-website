@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../Gym.css">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:black;
+        color:white;
+    }
+
+    header{
+        background:transparent;
+        padding:20px 50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        position:fixed;
+        width:100%;
+        z-index:100;
+    }
+
+    .logo{
+        font-size:28px;
+        font-weight:bold;
+        color:#ff4d00;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin-left:25px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        color:#ff4d00;
+    }
+
+    .hero{
+        height:100vh;
+        background:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') center/cover;
+        background-attachment: fixed;;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:60px;
+        margin-bottom:20px;
+    }
+
+    .hero-content p{
+        font-size:22px;
+        margin-bottom:25px;
+    }
+
+    .btn{
+        background:#ff7700;
+        padding:15px 30px;
+        color:white;
+        text-decoration:none;
+        border-radius:5px;
+    }
+
+    section{
+        padding:80px 50px;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:40px;
+        color:#ff4d00;
+        font-size:36px;
+    }
+
+    .about, .plans, .trainers{
+        max-width:1200px;
+        margin:auto;
+    }
+
+    .cards{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:30px;
+    }
+
+    .card{
+        background:#222;
+        padding:25px;
+        border-radius:10px;
+        text-align:center;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+    }
+
+    .price{
+        font-size:30px;
+        color:#ff4d00;
+        margin:15px 0;
+    }
+
+    .trainer-img{
+        width:100%;
+        height:250px;
+        object-fit:cover;
+        border-radius:10px;
+    }
+
+    form{
+        max-width:500px;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    input, textarea{
+        padding:20px;
+        border:none;
+        border-radius:5px;
+    }
+
+    button{
+        background:#ff4d00;
+        color:white;
+        padding:15px;
+        border:none;
+        cursor:pointer;
+    }
+
+    footer{
+        text-align:center;
+        padding:20px;
+        background:#000;
+    }
+
+    @media(max-width:768px){
+        .hero-content h1{
+            font-size:40px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PowerFit</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#plans">Plans</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Transform Your Body</h1>
+        <p>Push harder than yesterday if you want a different tomorrow.</p>
+        <a href="#plans" class="btn">Join Now</a>
+    </div>
+</section>
+
+<section id="plans">
+    <h2>Membership Plans</h2>
+    <div class="plans cards">
+        <div class="card">
+            <h3>Basic</h3>
+            <div class="price">$20/mo</div>
+            <p>Gym Access</p>
+            <p>Locker Room</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <div class="price">$40/mo</div>
+            <p>Gym + Classes</p>
+            <p>Nutrition Guide</p>
+        </div>
+
+        <div class="card">
+            <h3>Elite</h3>
+            <div class="price">$70/mo</div>
+            <p>Personal Trainer</p>
+            <p>Custom Workout Plan</p>
+        </div>
+    </div>
+</section>
+
+<section id="trainers">
+    <h2>Our Trainers</h2>
+    <div class="trainers cards">
+        <div class="card">
+            <img class="trainer-img" src="https://sochi.edu/wp-content/uploads/successful-personal-trainer.jpg">
+            <h3>John Carter</h3>
+            <p>Strength Coach</p>
+        </div>
+
+        <div class="card">
+            <img class="trainer-img" src="https://t3.ftcdn.net/jpg/05/62/09/28/360_F_562092860_mWJBNRqTg4rarfoJaSdkaLlfy1dkrP33.jpg">
+            <h3>Emma</h3>
+            <p>Yoga Expert</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Message"></textarea>
+        <button>Send Message</button>
+    </form>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+        <p style="text-align:center; font-size:18px;">
+            PowerFit Gym helps you achieve your fitness goals with modern equipment,
+            professional trainers, and personalized workout programs.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 PowerFit Gym. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
